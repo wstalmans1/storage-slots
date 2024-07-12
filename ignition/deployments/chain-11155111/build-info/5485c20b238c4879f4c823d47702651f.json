@@ -1,0 +1,202 @@
+{
+  "id": "5485c20b238c4879f4c823d47702651f",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.8.24",
+  "solcLongVersion": "0.8.24+commit.e11b9ed9",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/Storage.sol": {
+        "content": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.24;\n\ncontract Storage {\n    uint256 x = 97; // EVM has storage slots from 0x000...000 -> 0xffff...fff (2**256 storage slots, 1 storage slot can hold up to 32 bytes) \n    uint256 y = 56; // 0x0000...0001\n    // json RPC method to access storage slot: eth_getStorageAt(address, position)\n\n\n    // mapping(uint => uint) public myMapping // 0x0000...0002\n}\n"
+      }
+    },
+    "settings": {
+      "evmVersion": "paris",
+      "optimizer": {
+        "enabled": false,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "sources": {
+      "contracts/Storage.sol": {
+        "ast": {
+          "absolutePath": "contracts/Storage.sol",
+          "exportedSymbols": {
+            "Storage": [
+              8
+            ]
+          },
+          "id": 9,
+          "license": "UNLICENSED",
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "^",
+                "0.8",
+                ".24"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "39:24:0"
+            },
+            {
+              "abstract": false,
+              "baseContracts": [],
+              "canonicalName": "Storage",
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "fullyImplemented": true,
+              "id": 8,
+              "linearizedBaseContracts": [
+                8
+              ],
+              "name": "Storage",
+              "nameLocation": "74:7:0",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "constant": false,
+                  "id": 4,
+                  "mutability": "mutable",
+                  "name": "x",
+                  "nameLocation": "96:1:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8,
+                  "src": "88:14:0",
+                  "stateVariable": true,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": {
+                    "hexValue": "3937",
+                    "id": 3,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "100:2:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_97_by_1",
+                      "typeString": "int_const 97"
+                    },
+                    "value": "97"
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7,
+                  "mutability": "mutable",
+                  "name": "y",
+                  "nameLocation": "238:1:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8,
+                  "src": "230:14:0",
+                  "stateVariable": true,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": {
+                    "hexValue": "3536",
+                    "id": 6,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "242:2:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_56_by_1",
+                      "typeString": "int_const 56"
+                    },
+                    "value": "56"
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "scope": 9,
+              "src": "65:347:0",
+              "usedErrors": [],
+              "usedEvents": []
+            }
+          ],
+          "src": "39:374:0"
+        },
+        "id": 0
+      }
+    },
+    "contracts": {
+      "contracts/Storage.sol": {
+        "Storage": {
+          "abi": [],
+          "evm": {
+            "bytecode": {
+              "functionDebugData": {},
+              "generatedSources": [],
+              "linkReferences": {},
+              "object": "608060405260616000556038600155348015601957600080fd5b50603f8060276000396000f3fe6080604052600080fdfea2646970667358221220267bcc879bc1ac3184df13376d34d1d3e40142b9aeef61fe5bf9eb6d0d229ae164736f6c63430008180033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x61 PUSH1 0x0 SSTORE PUSH1 0x38 PUSH1 0x1 SSTORE CALLVALUE DUP1 ISZERO PUSH1 0x19 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x27 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x26 PUSH28 0xCC879BC1AC3184DF13376D34D1D3E40142B9AEEF61FE5BF9EB6D0D22 SWAP11 0xE1 PUSH5 0x736F6C6343 STOP ADDMOD XOR STOP CALLER ",
+              "sourceMap": "65:347:0:-:0;;;100:2;88:14;;242:2;230:14;;65:347;;;;;;;;;;;;;;;;"
+            },
+            "deployedBytecode": {
+              "functionDebugData": {},
+              "generatedSources": [],
+              "immutableReferences": {},
+              "linkReferences": {},
+              "object": "6080604052600080fdfea2646970667358221220267bcc879bc1ac3184df13376d34d1d3e40142b9aeef61fe5bf9eb6d0d229ae164736f6c63430008180033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x26 PUSH28 0xCC879BC1AC3184DF13376D34D1D3E40142B9AEEF61FE5BF9EB6D0D22 SWAP11 0xE1 PUSH5 0x736F6C6343 STOP ADDMOD XOR STOP CALLER ",
+              "sourceMap": "65:347:0:-:0;;;;;"
+            },
+            "methodIdentifiers": {}
+          },
+          "metadata": "{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Storage.sol\":\"Storage\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Storage.sol\":{\"keccak256\":\"0x4f9a1c262028ade06813a4965855054de1a57d25588c21ee87cdb7a9125d80be\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://29adcb4983671dcc1906b3efc21e303647a8fbde0f2f93c7963f90f3f38273a6\",\"dweb:/ipfs/QmTS2GWpQ78q7ArdnPWeeSxY3X8kP5c74npyU163Y9t3Gh\"]}},\"version\":1}"
+        }
+      }
+    }
+  }
+}
