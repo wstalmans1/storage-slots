@@ -11,9 +11,9 @@ async function lookup() {
         const provider = new hre.ethers.JsonRpcProvider(sepolia.url);
 
         // Use the provider to get the storage
-        const value = await provider.getStorage(addr, "0x0");
+        const value = await provider.getStorage(addr, "0x1");
 
-        console.log(value);
+        console.log(parseInt(value));
     } catch (error) {
         console.error("An error occurred:", error);
     }
